@@ -31,7 +31,9 @@ pid        <%= @pid %>;
 <% end -%>
 
 events {
-  accept_mutex <%= @accept_mutex %>;
+  <% if @accept_mutex == 'on' -%>
+  accept_mutex on;
+  <% end -%>
   <%- if @accept_mutex_delay -%>
   accept_mutex_delay <%= @accept_mutex_delay %>;
   <%- end -%>
