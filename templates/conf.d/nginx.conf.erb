@@ -139,7 +139,7 @@ http {
 <% if @client_body_buffer_size -%>
   client_body_buffer_size <%= @client_body_buffer_size %>;
 <% end -%>
-<% if @gzip == 'on' -%>
+<% if @proxy -%>
 <% if @proxy_redirect -%>
   proxy_redirect          <%= @proxy_redirect %>;
 <% end -%>
