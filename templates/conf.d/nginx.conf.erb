@@ -91,8 +91,9 @@ http {
   tcp_nopush on;
   <%- end -%>
 <% end -%>
-  server_tokens <%= @server_tokens %>;
-
+<% if @server_tokens == 'on' -%>
+  server_tokens on;
+<% end -%>
   types_hash_max_size <%= @types_hash_max_size %>;
   types_hash_bucket_size <%= @types_hash_bucket_size %>;
 
