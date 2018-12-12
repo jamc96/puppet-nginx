@@ -88,6 +88,7 @@ class nginx::config {
     default => $nginx::mime_types,
   }
   $multi_accept                   = $nginx::multi_accept
+  $names_hash_enable              = $nginx::names_hash_enable
   $names_hash_bucket_size         = $nginx::names_hash_bucket_size
   $names_hash_max_size            = $nginx::names_hash_max_size
   $nginx_cfg_prepend              = $nginx::nginx_cfg_prepend
@@ -117,6 +118,7 @@ class nginx::config {
   $spdy                           = $nginx::spdy
   $http2                          = $nginx::http2
   $ssl_stapling                   = $nginx::ssl_stapling
+  $types_hash_enable              = $nginx::types_hash_enable
   $types_hash_bucket_size         = $nginx::types_hash_bucket_size
   $types_hash_max_size            = $nginx::types_hash_max_size
   $worker_connections             = $nginx::worker_connections
