@@ -101,6 +101,7 @@ class nginx (
   Integer $names_hash_bucket_size                            = 64,
   Integer $names_hash_max_size                               = 512,
   $nginx_cfg_prepend                                         = false,
+  Enum['on', 'off'] $proxy                                   = 'on',
   String $proxy_buffers                                      = '32 4k',
   String $proxy_buffer_size                                  = '8k',
   String $proxy_cache_inactive                               = '20m',
